@@ -54,10 +54,9 @@ body {
           flex: 0 1 30%;
   width: 100%;
   min-height: 30vh;
-  background: url("/images/image-header-mobile.jpg") no-repeat center;
+  background: url("/images/image-header-mobile.jpg") #aa5cdb no-repeat center;
   background-size: cover;
-  background-color: #aa5cdb;
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
 }
 
 .content {
