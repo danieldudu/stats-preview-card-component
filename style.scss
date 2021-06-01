@@ -65,6 +65,7 @@ body {
   min-height: 30vh;
   // min-height: 50%;
   background: url('/images/image-header-mobile.jpg') $accent-color no-repeat center;
+  object-fit: contain;
   background-size: cover;
   // background-color: ;
   background-blend-mode: overlay;  
@@ -140,7 +141,12 @@ body {
 }
 
 .picture {
-  flex: 0 1 50%
+  flex: 0 1 50%;
+  background: url(/images/image-header-desktop.jpg) $accent-color no-repeat center;
+  object-fit: contain;
+  background-size: cover;
+  // background-color: ;
+  background-blend-mode: overlay; 
 }
 
 .stats-list{
