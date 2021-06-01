@@ -1,0 +1,159 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+// Color Scheme
+$bg-color:  hsl(233, 47%, 7%);
+$main-color: hsl(244, 38%, 16%);
+$accent-color: hsl(277, 64%, 61%);
+$lt-color: hsl(0, 0%, 100%);
+$p-color: hsla(0, 0%, 100%, 0.75);
+$stats-color: hsla(0, 0%, 100%, 0.6);
+
+// Font Size & Weights
+$font-size: 1.5rem;
+$font-bold: 700;
+$font-thin: 400;
+
+// Font Family 
+$inter: 'Inter', sans-serif;
+$lexend: 'Lexend Deca', sans-serif;
+
+
+// CSS Reset
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $bg-color;
+  color: $lt-color;
+  font-family: $inter;
+  font-size: 1.5rem;
+  // min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 2rem 0;
+  max-width: 400px;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  background-color: $main-color;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+
+.picture {
+  flex: 0 1 30%;
+  width: 100%;
+  min-height: 30vh;
+  // min-height: 50%;
+  background: url('/images/image-header-mobile.jpg') no-repeat center;
+  background-size: cover;
+  background-color: $accent-color;
+  background-blend-mode: multiply;
+  
+}
+
+
+.content {
+  flex: 0 1 70%;
+  width: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+   font-family: $lexend;
+   line-height: 1.1;
+   font-weight: $font-bold;
+   letter-spacing: 0.1rem;
+   font-size: 3rem;
+   margin-bottom: 2rem;
+   text-align: center;
+}
+
+.colored-text {
+  color: $accent-color;
+}
+
+.text {
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: $p-color;
+}
+
+.stats-list {
+  list-style: none;
+}
+
+.stats-list__item {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  margin-bottom: 2rem;
+
+}
+
+.stats-list__item--number {
+  font-size: 3rem;
+  font-weight: $font-bold;
+}
+
+.stats-list__item--label {
+  text-transform: uppercase;
+  font-family: $inter;
+  font-weight: $font-thin;
+  color: $stats-color;
+}
+
+@media (min-width: 768px) {
+.container {
+  flex-direction: row-reverse;
+  max-width: 1200px;
+}
+
+.content {
+  flex: 0 1 50%;
+ 
+}
+
+.picture {
+  flex: 0 1 50%
+}
+
+.stats-list{
+  display: flex;
+}
+
+
+
+.stats-list__item:not(:nth-child(1)) {
+  margin-left: 9rem;
+}
+
+.title, .text {
+  text-align: left;
+}
+}
