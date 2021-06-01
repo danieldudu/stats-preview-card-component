@@ -137,6 +137,7 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    height: 60vh;
     max-width: 1200px;
   }
   .content {
